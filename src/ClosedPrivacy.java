@@ -11,4 +11,10 @@ public class ClosedPrivacy extends GroupPrivacy {
 	  allowedUsers.add(user);
 	  return true;
   }
+
+@Override
+public IUser getAllowedMembers(IGroup group) {
+	// TODO Auto-generated method stub
+	return null;
+}
 }

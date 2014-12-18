@@ -22,5 +22,8 @@ public static boolean updateUserInGroup(IUser user1, String new_role) {
 	// TODO Auto-generated method stub
 	return false;
 }
+ public static boolean updateGroupPhoto(IGroup group, String newPhoto) {
+    return true;
+  }
   
 }

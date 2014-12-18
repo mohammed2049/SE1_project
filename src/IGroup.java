@@ -36,4 +36,9 @@ public abstract class IGroup {
 		return false;
 	}
 
+	
+	public abstract boolean changeGroupPicture(IUser user, String newPhoto);
+	
+	
+	
 }

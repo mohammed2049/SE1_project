@@ -53,10 +53,17 @@ public abstract class IUser {
 		return user;
 	}
 
-	public void login() {
+	
+
+	public static boolean login(Map<String, String> data) {
+		if (user != null) {
+			return UserModel.getUser(data);
+		}
+		return false;
 	}
 
-	public void logout() {
+	public static void logout() {
+		user = null;
 	}
 
 	private void User() {

@@ -26,6 +26,10 @@ public class Group extends IGroup {
 		return false;
 	}
 	
-	
+	public boolean changeGroupPicture(IUser user, String newPhoto) {
+		if (!users.get(user).equals("admin"))
+			return true;
+		return GroupModel.updateGroupPhoto(this, newPhoto);
+	}
 
 }

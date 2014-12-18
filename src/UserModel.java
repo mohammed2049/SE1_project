@@ -12,7 +12,10 @@ public class UserModel {
   public void DeleteUser() {
   }
 
-  public void getUser() {
+ public static boolean getUser(Map<String, String> data) {
+    IUser user = IUser.getCurrentActiveUser();
+    //user = data base return value
+    return true; 
   }
 
   public void updateUser() {

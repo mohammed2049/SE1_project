@@ -1,17 +1,22 @@
 public class PageModel {
 
-    public Page myPage;
+	public Page myPage;
 
-  public void createPage() {
-  }
+	public static boolean createPage(IPage page, IUser user) {
+		return true;
+	}
 
-  public void deletePage() {
-  }
+	public void deletePage() {
+	}
 
-  public void getPage() {
-  }
+	public void getPage() {
+	}
 
-  public void updatePage() {
-  }
+	public void updatePage() {
+	}
+
+	public static boolean createLike(IPage page, IUser user) {
+		return true;
+	}
 
 }

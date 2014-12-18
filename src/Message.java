@@ -1,4 +1,4 @@
-import java.util.Vector;
+import java.util.*;
 
 public abstract class Message {
 

@@ -1,12 +1,13 @@
-import java.util.List;
+import java.util.*;
 
 public abstract class GroupPrivacy {
 
-	public List<IUser> allowedUsers;
 
 	public IGroup myIGroup;
 
-	public void getAllowedMembers(IGroup group) {
-	}
+	public abstract IUser getAllowedMembers(IGroup group);
+	
+	public abstract boolean addAllowedMembers(IUser user);
 
+	
 }

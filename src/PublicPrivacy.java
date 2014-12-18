@@ -8,4 +8,16 @@ public class PublicPrivacy extends GroupPrivacy {
   public void getImportance() {
   }
 
+@Override
+public IUser getAllowedMembers(IGroup group) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public boolean addAllowedMembers(IUser user) {
+	// TODO Auto-generated method stub
+	return false;
+}
+
 }

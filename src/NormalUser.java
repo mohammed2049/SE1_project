@@ -16,7 +16,11 @@ public class NormalUser extends IUser {
 		return false;
 	}
 
-	
+	@Override
+	public void addFriend() {
+		// TODO Auto-generated method stub
+
+	}
 
 	public boolean makeInstance(Map<String, String> Data) {
 		// TODO Auto-generated method stub

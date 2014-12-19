@@ -24,9 +24,7 @@ public abstract class IUser {
 	
 	public abstract boolean sendFriendRequest(Map<String,String> Data );
 
-	public static boolean addFriend(IUser user1){
-		return UserModel.addNewFriendship(user1, user);
-	}
+	public abstract void addFriend();
 
 	public static IUser signUp(Map<String, String> Data) {
 		if (Data.get("type").equals("primuim"))
@@ -41,33 +39,21 @@ public abstract class IUser {
 		return null;
 	}
 
-	public List<IUser> getPendingRequests(){
-		return UserModel.getFriendsList("Pending");
-	}
-	public boolean AddFriend(IUser user){
-		return UserModel.addNewFriendship(this,user);
-	}
 	public static IUser getCurrentActiveUser() {
 		if (user == null)
 			return null;
 		return user;
 	}
 
-	
-
-	public static boolean login(Map<String, String> data) {
-		if (user != null) {
-			return UserModel.getUser(data);
-		}
-		return false;
+	public void login() {
 	}
 
-	public static void logout() {
-		user = null;
+	public void logout() {
 	}
 
 	private void User() {
 	}
-	
+
 	protected abstract boolean makeInstance(Map<String, String> Data);
+
 }

@@ -1,16 +1,15 @@
-import java.util.*;
+import java.util.Vector;
 
 public abstract class IPage {
 
-	static List<IUser> liked;
-	
-	public static boolean likeAPage(IPage page, IUser user) {
-		liked.add(user);
-		return PageModel.createLike(page, user);
-	}
+    public Vector  myIUser;
+    /**
+   * 
+   * @element-type IUser
+   */
+  public Vector  like;
 
-	public static IPage createPage(Map<String, String> data, IUser user) {
-		return new Page();
-	}
+  public void likeAPage() {
+  }
 
 }

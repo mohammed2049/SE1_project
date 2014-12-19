@@ -4,6 +4,10 @@ public class ClosedPrivacy extends GroupPrivacy {
 
   public List<IUser> allowedUsers;
 
+  public ClosedPrivacy(){
+	  
+  }
+  
   public void isAllowed(IUser user) {
   }
 
@@ -16,5 +20,11 @@ public class ClosedPrivacy extends GroupPrivacy {
 public IUser getAllowedMembers(IGroup group) {
 	// TODO Auto-generated method stub
 	return null;
+}
+
+@Override
+public void setAllowedMembers(IUser user) {
+	// TODO Auto-generated method stub
+	
 }
 }

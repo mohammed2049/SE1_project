@@ -8,6 +8,7 @@ public abstract class GroupPrivacy {
 	public abstract IUser getAllowedMembers(IGroup group);
 	
 	public abstract boolean addAllowedMembers(IUser user);
-
+	
+	public abstract void setAllowedMembers(IUser user);
 	
 }

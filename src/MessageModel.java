@@ -1,7 +1,9 @@
 public class MessageModel {
 
-  public void createMessage() {
-  }
+	public static boolean createMessage(IUser receiver, IUser user) {
+		  return false;
+	  }
+
 
   public void deleteMessage() {
   }

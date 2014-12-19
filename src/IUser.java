@@ -57,7 +57,7 @@ public abstract class IUser {
 
 	public static boolean login(Map<String, String> data) {
 		if (user != null) {
-			return UserModel.getUser(data);
+			return ! (UserModel.getUser(data.get("email")).isEmpty());
 		}
 		return false;
 	}

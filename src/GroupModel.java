@@ -2,7 +2,8 @@ public class GroupModel {
 
     public Group myGroup;
 
-  public void createGroup() {
+  static public  boolean createGroup(IGroup newGroup) {
+    return true;
   }
 
   public void updateGroup() {

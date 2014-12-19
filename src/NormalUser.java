@@ -15,7 +15,6 @@ public class NormalUser extends IUser {
 			return UserModel.addFriendRequest(this.email, Data.get("email"));
 		return false;
 	}
-
 	
 
 	public boolean makeInstance(Map<String, String> Data) {

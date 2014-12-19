@@ -34,4 +34,6 @@ public class PremiumUser extends IUser {
 		return false;
 	}
 
+	
+
 }

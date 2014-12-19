@@ -1,12 +1,14 @@
-import java.util.*;
+import java.util.Vector;
 
 public class Page extends IPage {
 
-	
-	public Page() {
-		liked = new ArrayList<IUser>();
-	}
-	public void likeAPage() {
-	}
+//  public Integer users : List<IUser>;
+//
+//    public Vector  myIUser;
+//    public Vector  myIUser;
+//    public PageModel myPageModel;
+
+  public void likeAPage() {
+  }
 
 }

@@ -9,15 +9,15 @@ public class PublicPrivacy extends GroupPrivacy {
   }
 
 @Override
-public IUser getAllowedMembers(IGroup group) {
+public void getAllowedMembers(IGroup group) {
 	// TODO Auto-generated method stub
-	return null;
+	
 }
 
 @Override
-public boolean addAllowedMembers(IUser user) {
-	// TODO Auto-generated method stub
-	return false;
+public void setAllowedMembers(IUser user) {
+	allowedUsers.add(user);
+	
 }
 
 }

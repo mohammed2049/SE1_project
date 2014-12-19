@@ -14,13 +14,8 @@ public class PremiumUser extends IUser {
 		return UserModel.addFriendRequest(this.email,Data.get("email"));
 	}
 
-	@Override
-	public void addFriend() {
-		// TODO Auto-generated method stub
 
-	}
 
-	@Override
 	public boolean makeInstance(Map<String, String> Data) {
 		// TODO Auto-generated method stub
 		creditCardNumber = Data.get("creditCard");
@@ -38,5 +33,7 @@ public class PremiumUser extends IUser {
 
 		return false;
 	}
+
+	
 
 }

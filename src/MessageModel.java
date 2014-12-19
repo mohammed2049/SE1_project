@@ -1,12 +1,16 @@
 public class MessageModel {
 
-  public void createMessage() {
-  }
+	public static boolean createMessage(IUser receiver, IUser user) {
+		  return false;
+	  }
+
 
   public void deleteMessage() {
   }
 
-  public void getMessage() {
+  public static Message getMessage(IUser user,IUser user2 ) {
+	  Message m= new ChatMessage();// must return the message between these two users
+	  return m;
   }
 
   public void updateMessage() {

@@ -1,4 +1,4 @@
-import java.util.Map;
+import java.util.*;
 
 public class UserModel {
 
@@ -12,10 +12,9 @@ public class UserModel {
   public void DeleteUser() {
   }
 
-  public static boolean getUser(Map<String, String> data) {
-	  IUser user = IUser.getCurrentActiveUser();
-	  //user = data base return value
-	  return true; 
+ static public ArrayList <IUser> getUser(String email) {
+    ArrayList <IUser> users = null;
+    return users;
   }
 
   public void updateUser() {
@@ -24,5 +23,13 @@ public class UserModel {
   static public boolean addFriendRequest(String e1,String e2){
 	  System.out.println( e1 +"  "+ e2  );
 	  return true;
+  }
+  
+  public  static  List<IUser> getFriendsList(String status){
+	  List<IUser> users= new ArrayList<IUser>();
+	  return users;
+  }
+  public static boolean addNewFriendship(IUser user, IUser user1){
+	  return false;
   }
 }

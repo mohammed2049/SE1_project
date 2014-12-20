@@ -2,7 +2,7 @@ import java.util.*;
 
 public abstract class IGroup {
 
-	public GroupPrivacy myGroupPrivacy;
+	public GroupPrivacy privacy;
 	
 	//
 	// public Vector 0..*;
@@ -10,8 +10,8 @@ public abstract class IGroup {
 	// public Vector hasA;
 
 	public boolean addMember(IUser user, String role) {
-		if (myGroupPrivacy instanceof ClosedPrivacy) {
-			myGroupPrivacy.addAllowedMembers(user);
+		if (privacy instanceof ClosedPrivacy) {
+			privacy.addAllowedMembers(user);
 		}
 		return GroupModel.addMember(this, user, role);
 
@@ -38,6 +38,7 @@ public abstract class IGroup {
 
 	
 	public abstract boolean changeGroupPicture(IUser user, String newPhoto);
-	public abstract IGroup makeGroup(Map<String, String> data, IUser user);
+	
+	
 	
 }

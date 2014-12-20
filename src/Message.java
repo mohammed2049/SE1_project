@@ -2,12 +2,12 @@ import java.util.*;
 
 public abstract class Message {
 
-    public ArrayList <IUser>  myIUser;
+    public Vector  myIUser;
 
- 
+  public void sendMessage() {
+  }
 
-  public abstract boolean sendMessage();
-
-  public abstract void addReceiver(IUser user);
+  public void addReceiver() {
+  }
 
 }

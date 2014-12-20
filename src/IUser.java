@@ -1,26 +1,31 @@
+import java.sql.SQLException;
 import java.util.*;
 
 public abstract class IUser {
 
-	protected List<IGroup> subscribedGroups;
+	public List<IGroup> subscribedGroups;
 
-	protected List<IPage> likedPages;
+	public List<IPage> likedPages;
 
-	protected String type;
+	public String type;
 	
-	protected String name;
-
-	protected String email;
-
-	protected Message message;
-
-	protected List<IUser> friends;
-
-	protected static IUser user;
-
-	protected String password;
+	public String first_name;
 	
-	protected String gender;
+	public String last_name;
+
+	public String credit_card;
+	
+	public String email;
+
+	public Message message;
+
+	public List<IUser> friends;
+
+	public static IUser user;
+
+	public String password;
+	
+	public String gender;
 	
 	public abstract boolean sendFriendRequest(Map<String,String> Data );
 
@@ -28,8 +33,8 @@ public abstract class IUser {
 		return UserModel.addNewFriendship(user1, user);
 	}
 
-	public static IUser signUp(Map<String, String> Data) {
-		if (Data.get("type").equals("primuim"))
+	public static IUser signUp(Map<String, String> Data) throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+		if (Data.get("type").equals("premuim"))
 			user = new PremiumUser();
 		else
 			user = new NormalUser();
@@ -55,19 +60,18 @@ public abstract class IUser {
 
 	
 
-	public static boolean login(Map<String, String> data) {
-		if (user != null) {
-			return ! (UserModel.getUser(data.get("email")).isEmpty());
+	public static boolean login(Map<String, String> data) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+		if (user == null) {
+			return UserModel.getUser(data);
 		}
 		return false;
 	}
 
+	@SuppressWarnings({ "unused", "unused" })
 	public static void logout() {
 		user = null;
 	}
 
-	private void User() {
-	}
 	
-	protected abstract boolean makeInstance(Map<String, String> Data);
+	protected abstract boolean makeInstance(Map<String, String> Data) throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException;
 }

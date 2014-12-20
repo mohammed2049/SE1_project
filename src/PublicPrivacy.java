@@ -20,10 +20,4 @@ public boolean addAllowedMembers(IUser user) {
 	return false;
 }
 
-@Override
-public void setAllowedMembers(IUser user) {
-	// TODO Auto-generated method stub
-	
-}
-
 }

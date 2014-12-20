@@ -1,3 +1,4 @@
+import java.sql.SQLException;
 import java.util.*;
 
 public class PremiumUser extends IUser {
@@ -5,7 +6,8 @@ public class PremiumUser extends IUser {
 	private String creditCardNumber;
 
 	public boolean payByCredit() {
-		return false;
+		
+		return (creditCardNumber.length() == 14);
 	}
 
 	@Override
@@ -16,24 +18,24 @@ public class PremiumUser extends IUser {
 
 
 
-	public boolean makeInstance(Map<String, String> Data) {
+	public boolean makeInstance(Map<String, String> Data) throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		creditCardNumber = Data.get("creditCard");
+		creditCardNumber = Data.get("credit_card");
 
 		if (payByCredit()) {
 			type=Data.get("type");
 			gender= Data.get("gender");
 			subscribedGroups = new ArrayList<IGroup>();
 			likedPages = new ArrayList<IPage>();
-			name = Data.get("name");
+			first_name = Data.get("first_name");
+			last_name = Data.get("last_name");
 			email = Data.get("email");
 			password = Data.get("password");
+			credit_card = creditCardNumber;
 			return UserModel.CreateUser(this);
 		}
 
 		return false;
 	}
-
-	
 
 }

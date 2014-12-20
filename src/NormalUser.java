@@ -1,3 +1,4 @@
+import java.sql.*;
 import java.util.*;
 
 public class NormalUser extends IUser {
@@ -15,16 +16,18 @@ public class NormalUser extends IUser {
 			return UserModel.addFriendRequest(this.email, Data.get("email"));
 		return false;
 	}
+
 	
 
-	public boolean makeInstance(Map<String, String> Data) {
+	public boolean makeInstance(Map<String, String> Data) throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException {
 		// TODO Auto-generated method stub
 		type=Data.get("type");
 		gender = Data.get("gender");
 		numberOfFriends = 0;
 		subscribedGroups = new ArrayList<IGroup>();
 		likedPages = new ArrayList<IPage>();
-		name = Data.get("name");
+		first_name = Data.get("first_name");
+		last_name = Data.get("last_name");
 		email = Data.get("email");
 		password = Data.get("password");
 		return UserModel.CreateUser(this);

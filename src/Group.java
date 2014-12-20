@@ -31,18 +31,5 @@ public class Group extends IGroup {
 			return true;
 		return GroupModel.updateGroupPhoto(this, newPhoto);
 	}
-	public IGroup makeGroup(Map<String, String> data, IUser user) {
-		
-		if (data.get("group_privacy").equals("close_privacy")) {
-			myGroupPrivacy = new ClosedPrivacy();
-		} else if (data.get("group_privacy").equals("public_privacy")) {
-			myGroupPrivacy = new PublicPrivacy();
-		}
-		myGroupPrivacy.setAllowedMembers(user); 
-		this.coverPicture = data.get("coverPicture");
-		this.title = data.get("title");
-		users.put(user, "Admin");
-		return this;
-	}
 
 }

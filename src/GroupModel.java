@@ -2,7 +2,8 @@ public class GroupModel {
 
     public Group myGroup;
 
-  public void createGroup() {
+  static public  boolean createGroup(IGroup newGroup) {
+    return true;
   }
 
   public void updateGroup() {
@@ -13,8 +14,17 @@ public class GroupModel {
 
   public void deleteGroup() {
   }
-  public static boolean updateGroupPhoto(IGroup group, String newPhoto) {
+
+  public static boolean addMember(IGroup group, IUser user,String role){
 	  return true;
   }
 
+public static boolean updateUserInGroup(IUser user1, String new_role) {
+	// TODO Auto-generated method stub
+	return false;
+}
+ public static boolean updateGroupPhoto(IGroup group, String newPhoto) {
+    return true;
+  }
+  
 }

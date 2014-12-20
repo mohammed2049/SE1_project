@@ -10,4 +10,16 @@ public class GroupChatMessage extends Message {
 	  
   }
 
+  @Override
+public void addReceiver(IUser user) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public boolean sendMessage() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
 }

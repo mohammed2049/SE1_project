@@ -15,12 +15,7 @@ public class NormalUser extends IUser {
 			return UserModel.addFriendRequest(this.email, Data.get("email"));
 		return false;
 	}
-
-	@Override
-	public void addFriend() {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 	public boolean makeInstance(Map<String, String> Data) {
 		// TODO Auto-generated method stub
